@@ -196,6 +196,68 @@ address { font-style: normal; }
 .btn--full { width: 100%; }
 
 /* ──────────────────────────────────────
+   LOGO IMAGE PLACEMENTS
+────────────────────────────────────── */
+/* Nav logo */
+.nav__logo-img {
+  height: 38px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+.nav__brand-fallback {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+/* About card logo */
+.about__logo-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: contain;
+  background: var(--navy-2);
+  padding: 10px;
+  display: block;
+}
+.about__logo-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about__logo-fallback svg { width: 80px; height: 80px; }
+
+/* Footer logo */
+.footer__logo-img {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 0.75rem;
+  /* on dark footer, invert if needed — remove if logo suits dark bg naturally */
+  filter: brightness(0) invert(1);
+}
+
+/* Contact location link */
+.contact-detail__val--link {
+  color: var(--white);
+  transition: color var(--t1);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,.2);
+  padding-bottom: 1px;
+}
+.contact-detail__val--link:hover { color: var(--blue-lt); border-color: var(--blue-lt); }
+
+/* Map embed container */
+.contact__map {
+  margin-top: 2rem;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.07);
+}
+
+/* ──────────────────────────────────────
    NAVIGATION
 ────────────────────────────────────── */
 .nav {

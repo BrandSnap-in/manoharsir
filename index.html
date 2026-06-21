@@ -47,7 +47,12 @@
       "addressRegion": "Uttar Pradesh",
       "addressCountry": "IN"
     },
-    "openingHours": "Mo-Sa 08:00-20:00",
+    "openingHours": "Mo-Su 08:00-20:00",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 28.6717307,
+      "longitude": 77.4528432
+    },
     "sameAs": ["https://wa.me/919810250842"]
   }
   </script>
@@ -60,8 +65,12 @@
   <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
     <div class="nav__inner">
       <a href="#home" class="nav__brand" aria-label="Manohar Sir – Home">
-        <span class="nav__brand-name">Manohar<span class="nav__brand-sir">Sir</span></span>
-        <span class="nav__brand-tag">CBSE Classes 8–12</span>
+        <img src="logo.png" alt="Manohar Sir Coaching" class="nav__logo-img"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+        <span class="nav__brand-fallback" style="display:none;">
+          <span class="nav__brand-name">Manohar<span class="nav__brand-sir">Sir</span></span>
+          <span class="nav__brand-tag">CBSE Classes 8–12</span>
+        </span>
       </a>
       <button class="nav__burger" id="burger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu">
         <span></span><span></span><span></span>
@@ -187,21 +196,23 @@
       <div class="about__inner">
         <div class="about__visual reveal-left">
           <div class="about__card">
-            <div class="about__avatar" aria-hidden="true">
-              <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="40" cy="40" r="40" fill="#1E3A5F"/>
-                <circle cx="40" cy="30" r="14" fill="#3B82F6" opacity=".25"/>
-                <circle cx="40" cy="30" r="10" fill="#FAFAF8"/>
-                <ellipse cx="40" cy="62" rx="20" ry="12" fill="#FAFAF8"/>
-              </svg>
+            <div class="about__avatar">
+              <img src="logo.png" alt="Manohar Sir Coaching" class="about__logo-img"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+              <span class="about__logo-fallback" style="display:none;" aria-hidden="true">
+                <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="40" cy="40" r="40" fill="#1E3A5F"/>
+                  <circle cx="40" cy="30" r="14" fill="#3B82F6" opacity=".25"/>
+                  <circle cx="40" cy="30" r="10" fill="#FAFAF8"/>
+                  <ellipse cx="40" cy="62" rx="20" ry="12" fill="#FAFAF8"/>
+                </svg>
+              </span>
             </div>
             <div class="about__card-info">
               <strong class="about__card-name">Manohar Sir</strong>
               <span class="about__card-role">CBSE Educator · Ghaziabad</span>
             </div>
             <div class="about__badges-stack">
-              <span class="about__badge-item">M.Sc. Mathematics</span>
-              <span class="about__badge-item">B.Ed. Certified</span>
               <span class="about__badge-item">25+ Years Experience</span>
             </div>
           </div>
@@ -609,42 +620,74 @@
       <h2 class="section-title text-center reveal-fade" style="--d:.1s">Visit or <em>Reach Out</em></h2>
 
       <div class="contact__grid">
+
+        <!-- Phone -->
         <div class="contact-detail reveal-up">
           <div class="contact-detail__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.86 10.74 19.79 19.79 0 01.78 2.11 2 2 0 012.76 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 7.68a16 16 0 006.29 6.29l1.04-1.04a2 2 0 012.12-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+              <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.56.57 1 1 0 011 1V21a1 1 0 01-1 1A17 17 0 013 5a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.57 1 1 0 01-.25 1.01z"/>
+            </svg>
           </div>
           <div>
-            <p class="contact-detail__label">Phone & WhatsApp</p>
+            <p class="contact-detail__label">Phone &amp; WhatsApp</p>
             <a href="tel:+919810250842" class="contact-detail__val">+91 98102 50842</a>
           </div>
         </div>
+
+        <!-- Location -->
         <div class="contact-detail reveal-up" style="--d:.1s">
           <div class="contact-detail__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6a2.5 2.5 0 010 5.5z"/>
+            </svg>
           </div>
           <div>
             <p class="contact-detail__label">Location</p>
-            <p class="contact-detail__val">Ghaziabad, Uttar Pradesh</p>
+            <a href="https://www.google.com/maps?q=28.6717307,77.4528432" target="_blank" rel="noopener noreferrer" class="contact-detail__val contact-detail__val--link">Ghaziabad, Uttar Pradesh →</a>
           </div>
         </div>
+
+        <!-- Hours -->
         <div class="contact-detail reveal-up" style="--d:.2s">
           <div class="contact-detail__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+              <path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5z"/>
+            </svg>
           </div>
           <div>
             <p class="contact-detail__label">Class Hours</p>
-            <p class="contact-detail__val">Mon – Sat &nbsp;·&nbsp; 8:00 AM – 8:00 PM</p>
+            <p class="contact-detail__val">Mon – Sun &nbsp;·&nbsp; 8:00 AM – 8:00 PM</p>
           </div>
         </div>
+
+        <!-- Mode -->
         <div class="contact-detail reveal-up" style="--d:.3s">
           <div class="contact-detail__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+              <path d="M21 3H3a2 2 0 00-2 2v12a2 2 0 002 2h5v2H7v2h10v-2h-1v-2h5a2 2 0 002-2V5a2 2 0 00-2-2zm0 14H3V5h18v12z"/>
+            </svg>
           </div>
           <div>
             <p class="contact-detail__label">Mode of Teaching</p>
             <p class="contact-detail__val">Online &amp; Offline (Both Available)</p>
           </div>
         </div>
+
+      </div>
+
+      <!-- Google Map embed using real coordinates -->
+      <div class="contact__map reveal-up" style="--d:.2s">
+        <iframe
+          title="Manohar Sir Coaching location on Google Maps"
+          src="https://maps.google.com/maps?q=28.6717307,77.4528432&z=16&output=embed"
+          width="100%"
+          height="300"
+          style="border:0;border-radius:14px;display:block;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          aria-label="Map showing Manohar Sir Coaching location in Ghaziabad">
+        </iframe>
       </div>
 
       <div class="contact__ctas reveal-fade text-center">
@@ -667,7 +710,9 @@
     <div class="container">
       <div class="footer__inner">
         <div class="footer__brand">
-          <span class="footer__name">Manohar<span class="footer__name-sir">Sir</span></span>
+          <img src="logo.png" alt="Manohar Sir Coaching" class="footer__logo-img"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+          <span class="footer__name" style="display:none;">Manohar<span class="footer__name-sir">Sir</span></span>
           <p class="footer__tagline">CBSE Coaching Classes 8–12<br />Ghaziabad, Uttar Pradesh</p>
           <a href="https://wa.me/919810250842" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp">
             <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.134.558 4.133 1.535 5.872L0 24l6.271-1.644A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.812 9.812 0 01-5.009-1.37l-.36-.213-3.722.976.993-3.631-.234-.373A9.815 9.815 0 012.182 12C2.182 6.575 6.575 2.182 12 2.182S21.818 6.575 21.818 12 17.425 21.818 12 21.818z"/></svg>
